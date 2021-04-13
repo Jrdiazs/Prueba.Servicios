@@ -1,7 +1,5 @@
 ﻿using log4net.Config;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceProcess;
 
 namespace Prueba.Servicios
@@ -30,15 +28,17 @@ namespace Prueba.Servicios
                     case "1":
                         Console.WriteLine("digite el valor de la cadena");
 
-                        var value =Console.ReadLine().Trim();
+                        var value = Console.ReadLine().Trim();
                         var generateValue = GenerarConteo(value);
 
                         Console.WriteLine($"la cadena generada es {generateValue}");
                         break;
+
                     case "2":
                         IExecuteJobs executeTask = new ExecuteJobs();
                         executeTask.Start();
                         break;
+
                     default:
                         Console.WriteLine($"Opcion iválida {code}!!");
                         break;
@@ -57,12 +57,12 @@ namespace Prueba.Servicios
             }
         }
 
-        public static string GenerarConteo(string cadena) 
+        public static string GenerarConteo(string cadena)
         {
             string getValue = string.Empty;
             try
             {
-                if (cadena.Length > 2) 
+                if (cadena.Length > 2)
                 {
                     var arrayValues = cadena.ToCharArray();
 
@@ -83,11 +83,8 @@ namespace Prueba.Servicios
 
                     if (getValue.Length < cadena.Length)
                         return getValue;
-
                 }
                 return cadena;
-              
-  
             }
             catch (Exception ex)
             {

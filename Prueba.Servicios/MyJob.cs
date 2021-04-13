@@ -24,8 +24,8 @@ namespace Prueba.Servicios
 
                         if (key != null)
                         {
-                            RegistryKey subkey = key.CreateSubKey("LlaveJr",permissionCheck: RegistryKeyPermissionCheck.ReadWriteSubTree);
-                            if (subkey == null) 
+                            RegistryKey subkey = key.CreateSubKey("LlaveJr", permissionCheck: RegistryKeyPermissionCheck.ReadWriteSubTree);
+                            if (subkey == null)
                             {
                                 Logger.Info($"{nameof(subkey)} is null");
                             }
