@@ -65,7 +65,6 @@ namespace Prueba.Servicios
                 if (cadena.Length > 2) 
                 {
                     var arrayValues = cadena.ToCharArray();
-                    var values = new Dictionary<char, int>();
 
                     char caracterInicial = arrayValues[0];
                     int count = 1;
